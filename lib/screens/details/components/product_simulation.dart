@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/cart/cart_screen.dart';
 import 'package:shop_app/screens/details/components/label_price.dart';
 
 import '../../../components/default_button.dart';
@@ -133,7 +134,7 @@ class ProductSimulation extends StatelessWidget {
             right: getProportionateScreenWidth(50),
           ),
           child: DefaultButton(
-            press: () {},
+            press: () => Navigator.pushNamed(context, CartScreen.routeName),
             text: "LANJUT",
           ),
         ),

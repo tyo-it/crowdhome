@@ -32,7 +32,7 @@ class LabelPrice extends StatelessWidget {
             value,
             style: TextStyle(
               color: kPrimaryColor,
-              fontSize: getProportionateScreenWidth(14),
+              fontSize: getProportionateScreenWidth(12),
               fontWeight: FontWeight.bold,
             ),
           ),
