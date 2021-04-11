@@ -20,12 +20,13 @@ class _ProductImagesState extends State<ProductImages> {
   int selectedImage = 0;
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
+      alignment: Alignment.center,
       children: [
         SizedBox(
-          width: getProportionateScreenWidth(238),
+          width: double.infinity,
           child: AspectRatio(
-            aspectRatio: 1,
+            aspectRatio: 1.52,
             child: Hero(
               tag: widget.product.id.toString(),
               child: Image.asset(widget.product.images[selectedImage]),
@@ -33,12 +34,14 @@ class _ProductImagesState extends State<ProductImages> {
           ),
         ),
         // SizedBox(height: getProportionateScreenWidth(20)),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ...List.generate(widget.product.images.length,
-                (index) => buildSmallProductPreview(index)),
-          ],
+        Positioned(
+          bottom: 10,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...List.generate(widget.product.images.length, (index) => buildSmallProductPreview(index)),
+            ],
+          ),
         )
       ],
     );
@@ -54,14 +57,13 @@ class _ProductImagesState extends State<ProductImages> {
       child: AnimatedContainer(
         duration: defaultDuration,
         margin: EdgeInsets.only(right: 15),
-        padding: EdgeInsets.all(8),
+        padding: EdgeInsets.all(2),
         height: getProportionateScreenWidth(48),
         width: getProportionateScreenWidth(48),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-              color: kPrimaryColor.withOpacity(selectedImage == index ? 1 : 0)),
+          border: Border.all(color: kPrimaryColor.withOpacity(selectedImage == index ? 1 : 0)),
         ),
         child: Image.asset(widget.product.images[index]),
       ),

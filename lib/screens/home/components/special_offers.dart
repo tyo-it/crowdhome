@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../constants.dart';
 import '../../../constants.dart';
+import '../../../models/Product.dart';
 import '../../../size_config.dart';
+import '../../details/details_screen.dart';
 import 'section_title.dart';
 
 class SpecialOffers extends StatelessWidget {
@@ -31,13 +33,21 @@ class SpecialOffers extends StatelessWidget {
                 image: "assets/images/kos1.png",
                 category: "Smartphone",
                 numOfBrands: 18,
-                press: () {},
+                press: () => Navigator.pushNamed(
+                  context,
+                  DetailsScreen.routeName,
+                  arguments: ProductDetailsArguments(product: demoProducts[0]),
+                ),
               ),
               SpecialOfferCard(
                 image: "assets/images/kos1.png",
                 category: "Fashion",
                 numOfBrands: 24,
-                press: () {},
+                press: () => Navigator.pushNamed(
+                  context,
+                  DetailsScreen.routeName,
+                  arguments: ProductDetailsArguments(product: demoProducts[1]),
+                ),
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
