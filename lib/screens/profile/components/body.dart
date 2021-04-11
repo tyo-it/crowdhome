@@ -10,33 +10,33 @@ class Body extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          ProfilePic(),
+          //ProfilePic(),
           SizedBox(height: 20),
           ProfileMenu(
-            text: "My Account",
+            text: "E-mail",
             icon: "assets/icons/User Icon.svg",
             press: () => {},
           ),
           ProfileMenu(
-            text: "Notifications",
+            text: "Identitas",
             icon: "assets/icons/Bell.svg",
             press: () {},
           ),
           ProfileMenu(
-            text: "Settings",
+            text: "Data Investor",
             icon: "assets/icons/Settings.svg",
             press: () {},
           ),
           ProfileMenu(
-            text: "Help Center",
+            text: "NPWP",
             icon: "assets/icons/Question mark.svg",
             press: () {},
           ),
-          ProfileMenu(
-            text: "Log Out",
-            icon: "assets/icons/Log out.svg",
-            press: () {},
-          ),
+          // ProfileMenu(
+          //   text: "Log Out",
+          //   icon: "assets/icons/Log out.svg",
+          //   press: () {},
+          // ),
         ],
       ),
     );
