@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -32,11 +33,13 @@ class Body extends StatelessWidget {
             icon: "assets/icons/Question mark.svg",
             press: () {},
           ),
-          // ProfileMenu(
-          //   text: "Log Out",
-          //   icon: "assets/icons/Log out.svg",
-          //   press: () {},
-          // ),
+          ProfileMenu(
+            text: "Disclaimer",
+            icon: "assets/icons/Lock.svg",
+            press: () {
+              Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+            },
+          ),
         ],
       ),
     );
