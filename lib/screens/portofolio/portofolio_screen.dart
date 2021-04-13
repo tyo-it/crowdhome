@@ -9,7 +9,12 @@ class PortofolioScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Body(),
+      appBar: AppBar(
+        title: Text('Portofolio'),
+      ),
+      body: Center(
+        child: Body(),
+      ),
       bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.favourite),
     );
   }
