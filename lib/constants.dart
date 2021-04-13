@@ -20,6 +20,13 @@ final headingStyle = TextStyle(
   height: 1.5,
 );
 
+final titleStyle = TextStyle(
+  fontSize: getProportionateScreenWidth(16),
+  fontWeight: FontWeight.bold,
+  color: kTextColor,
+  height: 1.5,
+);
+
 const defaultDuration = Duration(milliseconds: 250);
 
 // Form Error

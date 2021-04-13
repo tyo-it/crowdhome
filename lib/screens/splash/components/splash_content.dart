@@ -7,9 +7,10 @@ class SplashContent extends StatelessWidget {
   const SplashContent({
     Key key,
     this.text,
+    this.subtitle,
     this.image,
   }) : super(key: key);
-  final String text, image;
+  final String text, subtitle, image;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,20 @@ class SplashContent extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Text(
-          text,
-          textAlign: TextAlign.center,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: titleStyle,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Text(
+            subtitle,
+            textAlign: TextAlign.center,
+          ),
         ),
         Spacer(flex: 2),
         Image.asset(

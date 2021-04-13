@@ -16,15 +16,23 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to CrowdHome,\nLet’s Invest in Property Now!",
+      "text": "Welcome to CrowdHome,",
+      "subtitle": "Let’s Invest in Property Now!",
       "image": "assets/images/crowdhome.jpg",
     },
     {
-      "text": "We help people conect with store \naround United State of America",
+      "text": "Investasi property mulai dari Rp 1 juta",
+      "subtitle": "Memiliki property komersial bersama-sama",
+      "image": "assets/images/splash_1.png"
+    },
+    {
+      "text": "Pembagian Deviden setiap 3 bulan",
+      "subtitle": "Keuntungan usaha tepat waktu!",
       "image": "assets/images/splash_2.png"
     },
     {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
+      "text": "Saham properti yang terus naik dan dapat dijual belikan",
+      "subtitle": "Nikmati capital gain dari property yang selalu naik!",
       "image": "assets/images/splash_3.png",
     },
   ];
@@ -47,6 +55,7 @@ class _BodyState extends State<Body> {
                 itemBuilder: (context, index) => SplashContent(
                   image: splashData[index]["image"],
                   text: splashData[index]['text'],
+                  subtitle: splashData[index]['subtitle'],
                 ),
               ),
             ),
