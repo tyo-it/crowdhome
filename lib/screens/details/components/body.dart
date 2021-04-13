@@ -19,33 +19,37 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         ProductImages(product: product),
-        TopRoundedContainer(
-          color: Colors.black12,
-          child: DefaultTabController(
-            length: 2,
-            child: Column(
-              children: [
-                TabBar(
-                  labelColor: Colors.black87,
-                  tabs: <Tab>[
-                    new Tab(text: "Informasi"),
-                    new Tab(text: "Simulasi"),
-                  ],
-                ),
-                Container(
-                  height: 395,
-                  child: TabBarView(children: [
-                    ProductInformation(
-                      product: product,
-                      pressOnSeeMore: () {},
+        Expanded(
+          child: TopRoundedContainer(
+            color: Colors.black12,
+            child: DefaultTabController(
+              length: 2,
+              child: Column(
+                children: [
+                  Container(
+                    height: 40,
+                    child: TabBar(
+                      labelColor: Colors.black87,
+                      tabs: <Tab>[
+                        new Tab(text: "Informasi"),
+                        new Tab(text: "Simulasi"),
+                      ],
                     ),
-                    ProductSimulation(
-                      product: product,
-                      pressOnSeeMore: () {},
-                    ),
-                  ]),
-                ),
-              ],
+                  ),
+                  Expanded(
+                    child: TabBarView(children: [
+                      ProductInformation(
+                        product: product,
+                        pressOnSeeMore: () {},
+                      ),
+                      ProductSimulation(
+                        product: product,
+                        pressOnSeeMore: () {},
+                      ),
+                    ]),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

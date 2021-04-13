@@ -26,7 +26,7 @@ class _ProductImagesState extends State<ProductImages> {
         SizedBox(
           width: double.infinity,
           child: AspectRatio(
-            aspectRatio: 1.52,
+            aspectRatio: 1.8,
             child: Hero(
               tag: widget.product.id.toString(),
               child: Image.asset(widget.product.images[selectedImage]),
